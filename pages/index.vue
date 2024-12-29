@@ -1,18 +1,26 @@
-<template>
-  <v-carousel hide-delimiters>
-    <v-carousel-item
-      :src="require('~/assets/img/dkv.png')"
-      cover
-    ></v-carousel-item>
+  <template>
+    <v-carousel class="h-78" show-arrows="hover" hide-delimiters>
+      <v-carousel-item
+        v-for="(image, index) in images"
+        :key="index"
+      >
+        <NuxtImg
+          :src="image"
+          alt="Slide Image"
+          class=" cover"
+        />
+      </v-carousel-item>
+    </v-carousel>
+  </template>
 
-    <v-carousel-item
-      :src="require('~/assets/img/tbsm.png')"
-      cover
-    ></v-carousel-item>
+  <script setup>
+  const images = [
+    'img/pbo.png',
+    'img/pplg.png',
+    'img/toi.png',
+  ];
+  </script>
 
-    <v-carousel-item
-      :src="require('~/assets/img/pplg.png')"
-      cover
-    ></v-carousel-item>
-  </v-carousel>
-</template>
+  <style scoped>
+  /* Styling opsional */
+  </style>

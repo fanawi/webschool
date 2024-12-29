@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.paddingX {
+    padding: 20px 90px;
+}
+
+.paddingY {
+    padding: 20px 0px;
+}
+
+.paddingXY {
+    padding: 20px;
+}

@@ -1,13 +1,21 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  compatibilityDate: '2024-12-28',
   devtools: { enabled: false },
+  modules: ['@nuxt/image',
+            '@nuxt/icon',
+  ],
+  
+  plugins: ['~/plugins/vuetify'],
+  image: {
+    dir: 'assets', // Mengarahkan Nuxt Image ke folder assets
+  },
   css: [
     '~/assets/css/main.css',
-    'vuetify/lib/styles/main.sass',
+    '@mdi/font/css/materialdesignicons.min.css',
   ],
-
+  
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -23,5 +31,5 @@ export default defineNuxtConfig({
       'process.env.DEBUG': false,
     },
   },
-  
+
 })
